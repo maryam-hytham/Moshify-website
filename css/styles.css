@@ -1,6 +1,11 @@
 /* Normalize css */
 @import "normalize.css";
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 /* Colors */
 :root {
   --color-primary: #2584ff;
@@ -129,7 +134,7 @@ a {
   }
 }
 
-/* icons */
+/* Icons */
 .icon {
   width: 40px;
   height: 40px;
@@ -145,4 +150,57 @@ a {
   display: inline-flex;
   justify-content: center;
   align-items: center;
+}
+
+/* Buttons */
+.btn {
+  border: 0;
+  border-radius: 40px;
+  cursor: pointer;
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin: 1rem 0;
+  padding: 2rem 3rem;
+  text-align: center;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+.btn--primary {
+  background-color: var(--color-primary);
+  color: white;
+}
+.btn--primary:hover {
+  background-color: #1a6ecf;
+}
+.btn--secondary {
+  background-color: var(--color-secondary);
+  color: white;
+}
+.btn--secondary:hover {
+  background-color: #00b3d9;
+}
+.btn--accent {
+  background-color: var(--color-accent);
+  color: white;
+}
+.btn--accent:hover {
+  background-color: #e62b00;
+}
+.btn--outline {
+  background-color: transparent;
+  color: var(--color-headings);
+  border: 2px solid var(--color-headings);
+}
+.btn--outline:hover {
+  background-color: var(--color-headings);
+  color: white;
+}
+.btn--block {
+  display: inline-block;
+  width: 100%;
+}
+@media screen and (min-width: 1024px) {
+  .btn {
+    font-size: 1.5rem;
+  }
 }
