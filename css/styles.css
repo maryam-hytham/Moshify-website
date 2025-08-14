@@ -224,16 +224,35 @@ a {
   border-radius: var(--boredr-radius);
   display: flex;
 }
-.input-group .input{
+.input-group .input {
   border: 0;
   flex-grow: 1;
-padding: 1.5rem 1rem;
+  padding: 1.5rem 1rem;
 }
-.input-group .btn{
+.input-group .btn {
   margin: 4px;
 }
 @media screen and (min-width: 1024px) {
   .input {
     font-size: 1.5rem;
   }
+}
+
+/* Cards */
+.card {
+  border-radius: 7px;
+  box-shadow: 0 0 20px 10px #f3f3f3;
+  overflow: hidden;
+}
+.card__header,
+.card__body {
+  padding: 2rem 3rem;
+}
+.card--primary .card__header {
+  background-color: var(--color-primary);
+  color: white;
+}
+.card--secondary .card__header {
+  background-color: var(--color-secondary);
+  color: white;
 }
